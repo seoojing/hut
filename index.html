@@ -9,14 +9,14 @@
 
 
  /*카드부분*/
-	a { color: black;
+	a2 { color: black;
 	position: absolute;
 	width: 53ch;
 	margin: 21em 8em;
 	cursor: pointer;
 	}
 
-a:hover{ color: white;
+a2:hover{ color: white;
 	position: absolute;	
 	width: 53ch;
 	margin: 21em 8em;
@@ -322,18 +322,9 @@ p {
 	width: 53ch;
 	margin: 1em 1em;
 	}
-a { color: black;
-	position: absolute;
-	width: 53ch;
-	margin: 21em 8em;
-	cursor: pointer;
-	}
 
-a:hover{ color: white;
-	position: absolute;	
-	width: 53ch;
-	margin: 21em 8em;
-	}
+
+
 
 	#sigar { position: absolute; z-index: 99;cursor: pointer; bottom:60%; right: 35%; }
 	#sigar img{ position: absolute; width: 400px; height: 150px;z-index: 99;cursor: pointer;}
@@ -341,7 +332,7 @@ a:hover{ color: white;
 	#out { position: absolute; z-index: 99;cursor: pointer; bottom:69%;left: 43%; }
 	#out img{ position: absolute; width: 140px; height: 50px;z-index: 99;cursor: pointer;}
 
-	#turni{bottom: 8%; left: 48%; position: absolute;animation: backk 3s alternate; z-index: 99;}
+	#turni{bottom: 8%; left: 48%; position: absolute; z-index: 99;}
 	#turni img{width: 40px; height: auto;cursor: pointer; }
 
 	#tt { position: absolute; z-index: 99; top: 8%; left: 37%; animation: tra 2s alternate; display: none;cursor: pointer; }
@@ -497,11 +488,7 @@ p {
 </div>
 
 	<div id="container">
-<a href="https://seoojing.github.io/gya/">	
-	<div id="turni">
-		<img src="turn.png">
-	</div>
-</a>		
+	
 	 	<audio id="paper">
 		<source src="paper.mp3" type="audio/mpeg">
 	</audio>
@@ -599,6 +586,9 @@ p {
     </a5>
 </div>
 	 <h4 style="z-index: 100;" id="flashlight">딱히 손전등을 사용할 곳이 없다.</h4>
+	<audio id="beep">
+		<source src="beep.mp3" type="audio/mpeg">
+	</audio>
 
 
  <!-- 힌트영역 -->
@@ -683,7 +673,11 @@ p {
 		<img src="blank.png">
 	</div>
 
-
+<a href="https://seoojing.github.io/gya/">	
+	<div id="turni">
+		<img src="turn.png">
+	</div>
+</a>	
 	<audio id="tou">
 		<source src="touch.wav" type="audio/mpeg">
 	</audio>
@@ -706,7 +700,7 @@ p {
 		<audio id="viol">
 		<source src="viol.mp3" type="audio/mpeg">
 	</audio>
- <h5 id="poom">이상한 문양의 쪽지 같은 것이 붙어있다.</h5>
+ <h5 id="poom">화장실에 처음 방문 하십니까?</h5>
  <h5 id="poom2">문양 밑에는 읽기 어려운 한자가 쓰여있다...무슨...초대...?</h5>
  <h5 id="poom3">맨 뒤의 두 글자는 '초대'인 것 같다. </h5>
  <h5 id="poom4">사라진 주연이의 실종 포스터가 게시판 여기저기 붙어있다.</h5>
@@ -732,7 +726,7 @@ p {
     </div>
     <div class="details">
       <p><br>『#2 이상한 문양?』<br><br><br>학사의 게시판에 이상한 문양이 <br>그려져 있는 쪽지를 발견했다.<br>벌레나 삽엽충의 모양인 것 같다. <br>문양 밑에는 한자가 쓰여있는데<br>맨 뒤의 두 글자가 '초대'라는 <br>것만 알고 있고 나머지는 본 적이 <br>없는 어려운 한자들이다.</p>
-      <a id="aa">닫기</a>
+      <a2 id="aa">닫기</a2>
     </div>
   </div>
   </div>
@@ -862,7 +856,8 @@ window.onmousemove = function(){
 
 var on = true;
 
-
+	soun11.onclick = function(){
+		beep.play();}	
 function lookDiv3 (){ 
   document.getElementById("hin3").style.display="none"; 
 } 
